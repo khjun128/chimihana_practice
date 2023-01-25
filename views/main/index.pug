@@ -1,0 +1,18 @@
+doctype html
+html(lang="ko_KR")
+    head
+    meta(charset='UTF-8')
+
+    title 취미하나
+    script(type='text/javascript' src='https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=tbbhmwixmj')
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/font.css')
+    link(rel='stylesheet', href='/stylesheets/common.css')
+
+    body
+        include ../template/header.pug
+
+        main
+            article
+                .d-flex.justify-content-center.align-items-center.flex-column(style="height: 750px; width:100%; background-image: url(/images/mainbanner.png); background-size: cover; background-position: center;")
+                    p.text-center(style="font: 38px/46px CJK-M; color: white;") 

@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'NG-R';
+    src: url("/fonts/NanumGOTHIC/NanumGothicR.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NG-B';
+    src: url("/fonts/NanumGOTHIC/NanumGothicB.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family : "CJK-L";
+    src: url("/fonts/NotoSansCJKkr/NotoSansCJKkr-Light.woff");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family : "CJK-DL";
+    src: url("/fonts/NotoSansCJKkr/NotoSansCJKkr-DemiLight.woff");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family : "CJK-R";
+    src: url("/fonts/NotoSansCJKkr/NotoSansCJKkr-Regular.woff");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family : "CJK-M";
+    src: url("/fonts/NotoSansCJKkr/NotoSansCJKkr-Medium.woff");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family : "CJK-B";
+    src: url("/fonts/NotoSansCJKkr/NotoSansCJKkr-Bold.woff");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family : "CJK-Bl";
+    src: url("/fonts/NotoSansCJKkr/NotoSansCJKkr-Black.woff");
+    font-weight: normal;
+    font-style: normal;
+}

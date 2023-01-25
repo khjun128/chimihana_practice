@@ -32,8 +32,6 @@ const commuication = require("./routes/communication/index");
 app.use(commuication);
 const company = require("./routes/company/index");
 app.use(company);
-const home = require("./routes/home/index");
-app.use(home);
 const product = require("./routes/product/index");
 app.use(product);
 const program = require("./routes/program/index");

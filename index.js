@@ -1,10 +1,27 @@
 const express = require("express");
 require("express-async-errors");
 const app = express();
+const session = require("express-session");
+const MYSQLStore = require("express-mysql-session")(session);
 const port = 3000;
 
 app.set("view engine", "pug");
 app.use(express.static("public"));
+
+app.use(
+  session({
+    secret: "123",
+    resave: false,
+    saveUninitialized: false,
+    store: new MYSQLStore({
+      host: "localhost",
+      port: 3306,
+      user: "root",
+      password: "kohyunjun1",
+      database: "chimihana",
+    }),
+  })
+);
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json({ extended: true }));
@@ -26,16 +43,8 @@ app.use((req, res, next) => {
 
 const main = require("./routes/main/index");
 app.use(main);
-const business = require("./routes/business/index");
-app.use(business);
-const commuication = require("./routes/communication/index");
-app.use(commuication);
-const company = require("./routes/company/index");
-app.use(company);
-const product = require("./routes/product/index");
-app.use(product);
-const program = require("./routes/program/index");
-app.use(program);
+const map = require("./routes/map/index");
+app.use(map);
 
 app.get("*", (err, req, res, next) => {
   res.render("500/index");

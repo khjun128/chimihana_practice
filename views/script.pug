@@ -12,6 +12,7 @@ link(rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.cs
 link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
 link(rel='stylesheet', href='/stylesheets/font.css')
 link(rel='stylesheet', href='/stylesheets/common.css')
+link(rel='stylesheet', href='/stylesheets/AppleSDGothicNeoR.ttf')
 script.
   document.addEventListener("DOMContentLoaded", function(){
     if (window.innerWidth > 992) {
@@ -64,7 +65,137 @@ style.
     padding: 24px 40px 14px;
     align-items: center;
   }
-  .collapse {
-    display: flex!important;
-    flex-basis: auto;
+  #close-button {
+    font: 27px AppleSDGothicNeoR;
+    opacity: 0.5;
+  }
+  .modal-title {
+    font: 15px AppleSDGothicNeoR;
+    color: #413939;
+    letter-spacing: 0.12px;
+    padding-top: 6px;
+  }
+  .modal-size {
+    width:954px;
+  }
+  @media (min-width:0px) {
+    .modal-size{--bs-modal-width:954px}
+  }
+  .modal-body {
+    padding: 40px 32px;
+  }
+  .modal-open .modal {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .modal-content .modal-header {
+    padding: 12px 32px 4px;
+    background-color: #FFF1F1;
+  }
+  .modal-header .close {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    background-color: rgba( 255, 255, 255, 0 );
+    box-sizing: border-box;
+  }
+  @media {.navbar-expand-lg{flex-wrap:nowrap;justify-content:flex-start}.navbar-expand-lg .navbar-nav{flex-direction:row}.navbar-expand-lg .navbar-nav .dropdown-menu{position:absolute}.navbar-expand-lg .navbar-nav .nav-link{padding-right:var(--bs-navbar-nav-link-padding-x);padding-left:var(--bs-navbar-nav-link-padding-x)}.navbar-expand-lg .navbar-nav-scroll{overflow:visible}.navbar-expand-lg .navbar-collapse{display:flex!important;flex-basis:auto}.navbar-expand-lg .navbar-toggler{display:none}.navbar-expand-lg .offcanvas{position:static;z-index:auto;flex-grow:1;width:auto!important;height:auto!important;visibility:visible!important;background-color:transparent!important;border:0!important;transform:none!important;transition:none}.navbar-expand-lg .offcanvas .offcanvas-header{display:none}.navbar-expand-lg .offcanvas .offcanvas-body{display:flex;flex-grow:0;padding:0;overflow-y:visible}}
+  #mainNotice {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(65, 57, 57, 0.8);
+    padding: 12px 0;
+    z-index: 50;
+  }
+  #Whitebutton {
+    width: 142px;
+    color: white;
+  }
+  #programbutton {
+    background-color: #ffffff;
+    width: 132px;
+    height: 35px;
+    padding: 0;
+    margin-left: 40px;
+    border: none;
+    border-radius: 0px;
+    font: 16px/35px AppleSDGothicNeoM;
+    letter-spacing: 0.12px;
+    color: #E95F5F;
+  }
+  #busibessbutton {
+    background-color: #EF2C2C;
+    width: 104px;
+    height: 35px;
+    padding: 0;
+    margin-left: 10px;
+    border: none;
+    border-radius: 0px;
+    font: 16px/35px AppleSDGothicNeoM;
+    letter-spacing: 0.12px;
+    color: #ffffff;
+  }
+  .carousel-item.active {
+    display: block;
+  }
+  .carousel-item {
+    position: relative;
+    display: none;
+    float: left;
+    width: 100%;
+    margin-right: -100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  .carousel-item-next, .carousel-item-prev, .carousel-item.active {
+    display: block;
+  }
+  #noticeCarousel .carousel-item-next, #noticeCarousel .active.carousel-item-right {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  button, input, optgroup, select, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+  }
+  .opop {
+    font: 16px AppleSDGothicNeoR;
+    display: block;
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid #D1D1D1;
+  }
+  .custom-radio {
+    font: 12px AppleSDGothicNeoR;
+  }
+  .custom-control-input {
+    position: relative;
+    margin-right: 3px;
+    vertical-align: top;
+  }
+  .custom-control-label {
+    margin-right: 12px;
+  }
+  .custom-radio {
+    color: #F8BEBE;
+  }
+  .program-select {
+    font: 12px AppleSDGothicNeoR;
+    color: #919191;
+    background-image: url(/images/dropdownarrow.png);
+    background-size: 8px 8px;
+    background-position: top 15px right 14px;
+    background-repeat: no-repeat;
+    -webkit-appearance: none;
+  }
+  textarea {
+    min-height:50px;
+    max-height:300px;
+  }
+  .text-right {
+    text-align: right;
   }

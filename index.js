@@ -3,7 +3,7 @@ require("express-async-errors");
 const app = express();
 const session = require("express-session");
 const MYSQLStore = require("express-mysql-session")(session);
-const port = 3000;
+const port = 80;
 
 app.set("view engine", "pug");
 app.use(express.static("public"));
@@ -45,6 +45,8 @@ const main = require("./routes/main/index");
 app.use(main);
 const map = require("./routes/map/index");
 app.use(map);
+const programapply = require("./routes/programapply/index");
+app.use(programapply);
 
 app.get("*", (err, req, res, next) => {
   res.render("500/index");

@@ -1,0 +1,64 @@
+doctype html
+html(lang="ko_KR")
+  head
+    meta(charset="UTF-8")
+
+    title 취미하나-프로그램 신청
+  body(marginwidth="0" marginheight="0")
+    include ../script.pug
+    include ../template/header.pug
+    include ../template/navigation.pug
+    .w-1200
+      .d-flex.justify-content-center.align-items-center
+        .w-50
+          img.img-fluid.w-100(src='images/programapply.png')
+        .w-50(style='padding: 0 50px;')
+          div(style='font: 26px AppleSDGothicNeoSB; color: #EC6666;') 프로그램 신청
+          div(style='font: 16px AppleSDGothicNeoR; color: #413939; margin-top: 10px;') 하단의 양식에 맞추어 내용을 작성해주시면 담당자가 확인 후, 연락드리겠습니다.
+
+          form(action='../routes/programapply/index.js' method='post')
+            .d-flex(style='margin-top: 70px;')
+              .w-50(style='padding-right: 10px;')
+                input.opop.name(name='name11' placeholder='작성자' required='')
+              .w-50(style='padding-right: 10px;')
+                input.opop.number(name='number' placeholder='연락처' required='')
+            .d-flex(style='margin-top: 20px;')
+              .w-100(style='padding-right: 10px;')
+                input.opop.email(name='email' placeholder='E-mail' required='')
+            .d-flex.align-items-center(style='margin-top: 20px; padding: 10px; height: 40px; border: 1px solid #D1D1D1;')
+              .h-100(style='width: 100px; color: #919191; font: 12px/18px AppleSDGothicNeoR;') 연령
+              .d-flex(style='flex: 1;')
+                .custom-control.custom-radio.custom-control-inline(required='')
+                  input#age1.custom-control-input(type='radio' value='10대' name='age')
+                  label.custom-control-label(for='age1') 10대 미만
+                .custom-control.custom-radio.custom-control-inline
+                  input#age2.custom-control-input(type='radio' value='20대' name='age')
+                  label.custom-control-label(for='age2') 20대
+                .custom-control.custom-radio.custom-control-inline
+                  input#age3.custom-control-input(type='radio' value='30대' name='age')
+                  label.custom-control-label(for='age3') 30대
+                .custom-control.custom-radio.custom-control-inline
+                  input#age4.custom-control-input(type='radio' value='40대' name='age')
+                  label.custom-control-label(for='age4') 40대
+                .custom-control.custom-radio.custom-control-inline
+                  input#age5.custom-control-input(type='radio' value='50대' name='age')
+                  label.custom-control-label(for='age5') 50대
+                .custom-control.custom-radio.custom-control-inline
+                  input#age6.custom-control-input(type='radio' value='60대' name='age')
+                  label.custom-control-label(for='age6') 60대 이상
+            select.program-select.d-flex.w-100(name='program' style='margin-top: 20px; padding: 10px; height: 40px; border: 1px solid #D1D1D1;' required='')
+              option(value='' selected='' disabled='') 신청 프로그램 선택
+              option(value='심리상담') 심리상담
+              option(value='심리검사') 심리검사
+              option(value='심리미술치료') 심리미술치료
+              option(value='컬러테라피') 컬러테라피
+              option(value='아로마테라피') 아로마테라피
+              option(value='솝앤밤') 솝앤밤
+              option(value='마인드캘리그라피') 마인드캘리그라피
+              option(value='이벤트프로그램') 이벤트프로그램
+            .h-100(style='padding: 10px; margin-top: 20px; width: 100px; color: #919191; font: 12px/18px AppleSDGothicNeoR;') 문의하기
+            textarea(name='ask' style='width:498px; height: 200px; border: 1px solid #D1D1D1;')
+            .text-right
+              button.btn.btn-b2c(type='submit' style='margin-top: 10px; background-color: #E95F5F; font: 14px AppleSDGothicNeoR; color: white; border-radius: 0;') 신청하기
+
+    include ../template/footer.pug

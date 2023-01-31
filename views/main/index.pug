@@ -19,48 +19,6 @@ html(lang="ko_KR")
         background-color: #E95F5F;
         opacity: 1;
       }
-      #mainNotice {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        background-color: rgba(65, 57, 57, 0.8);
-        padding: 12px 0;
-        z-index: 50;
-        opacity: 1;
-      }
-      #maininformation {
-        position: relative;
-        width: 554px;
-        text-align: left;
-      }
-      #Whitebutton {
-        color: #ffffff;
-        width: 104px;
-      }
-      #programbutton {
-        background-color: #ffffff;
-        width: 132px;
-        height: 35px;
-        padding: 0;
-        margin-left: 40px;
-        border: none;
-        border-radius: 0px;
-        font: 16px/35px AppleSDGothicNeoM;
-        letter-spacing: 0.12px;
-        color: #E95F5F;
-      }
-      #busibessbutton {
-        background-color: #EF2C2C;
-        width: 104px;
-        height: 35px;
-        padding: 0;
-        margin-left: 10px;
-        border: none;
-        border-radius: 0px;
-        font: 16px/35px AppleSDGothicNeoM;
-        letter-spacing: 0.12px;
-        color: #ffffff;
-      }
       .jb-wrap {
         width: 40%;
         position: relative;
@@ -104,7 +62,7 @@ html(lang="ko_KR")
     include ../template/header.pug
     include ../template/navigation.pug
     div(style='position: relative;')
-      #carouselExampleDark.carousel.carousel-dark.slide(data-bs-ride='carousel')
+      #carouselExampleDark.carousel.carousel-dark.slide(data-bs-ride='carousel' data-interval='9000')
         .carousel-indicators
           each banner, id in banners
             if id == 0
@@ -124,11 +82,18 @@ html(lang="ko_KR")
       #mainNotice
         .w-1200.d-flex.align-items-center
           div(style='width: 178px; font: 16px AppleSDGothicNeoR; color: white;') 취미하나 소식
-          a#maininformation(style='font: 16px AppleSDGothicNeoR; color: white;') 11월 원데이클래스 예약 오픈! (아트테라피, 컬러테라이, 아르마테라피...)
+          #noticeCarousel.carousel.slide.vert(data-ride='carousel' style='width: 554px; text-align: left;' data-interval='4000')
+            .carousel-inner
+              .carousel-item.active(style='white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: white;')
+                a(href='/news/read/4') 2022년 새해복 많이 받으세요 - 취미하나 일동
+              .carousel-item(style='white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: white;')
+                a(href='/news/read/3') 2021 K-핸드메이드페어에 취미하나가 참여합니다.
+              .carousel-item(style='white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: white;')
+                a(href='/news/read/1') 2021 취미하나 홈페이지 오픈
           a#Whitebutton(href='/news/list') MORE+
           div(style='height: 35px; width: 1px; background-color: #ffffffbe;')
-          a#programbutton.btn(href='/b2c') 프로그램 신청
-          a#busibessbutton.btn(href='/b2b') 사업 신청
+          a#programbutton.btn(href='/programapply') 프로그램 신청
+          a#busibessbutton.btn(href='/') 사업 신청
       
 
     .container-fluid.w-1200
@@ -205,12 +170,3 @@ html(lang="ko_KR")
             p EVENT PROGRAM
             p 이벤트 프로그램
     include ../template/footer.pug
-    
-    
-    
-    script.
-      $(document).ready(function() {
-        $('.carousel').carousel({
-          interval: 3000
-        })
-      });
